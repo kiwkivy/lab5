@@ -1,0 +1,14 @@
+show
+reorder
+update 2 KFGWG 15
+GREEN
+FIRE
+WISE
+473
+657
+4526
+3467
+show
+execute_script src/main/resources/script2
+save
+exit
