@@ -10,6 +10,7 @@ public class Exit extends Command {
 
     @Override
     public void execute(){
+        System.out.println("Завершение работы программы.");
         System.out.println("Ждём вас снова!");
         System.exit(0);
     }

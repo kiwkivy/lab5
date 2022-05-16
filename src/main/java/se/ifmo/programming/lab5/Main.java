@@ -10,10 +10,14 @@ public class Main {
         String fileName = System.getenv("FILENAME");
         if (fileName == null) {
             System.out.println("Переменная оркужения не установлена.\nВыход из программы.");
-            System.exit(17);
+            System.exit(16);
         }
         File file = new File(fileName);
-        if (!file.canRead()){
+        if (!file.exists()) {
+            System.out.println("Файл не найден!\nВыход из программы.");
+            System.exit(17);
+        }
+        else if (!file.canRead()) {
             System.out.println("Отсутствуют права на чтение!\nВыход из программы.");
             System.exit(18);
         } else if (!file.canWrite()) {

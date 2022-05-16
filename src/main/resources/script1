@@ -11,4 +11,3 @@ WISE
 show
 execute_script src/main/resources/script2
 save
-exit
