@@ -48,7 +48,7 @@ public class Interpreter {
             if (isConsoleMod) {
                 System.out.print("Введите команду: ");
             }
-            findEndOfFile(scanner);
+            Interpreter.findEndOfFile(scanner);
             data = scanner.nextLine();
             String[] commandParts = data.split("\\s+");
             String command = commandParts[0];
@@ -217,7 +217,7 @@ public class Interpreter {
         }
     }
     public static void findEndOfFile(Scanner scanner){
-        if (scanner == null || !scanner.hasNextLine())
+        if (!scanner.hasNextLine())
         {
             System.out.println("Обнаружен конец ввода. Выход из программы.");
             System.exit(20);
