@@ -219,6 +219,7 @@ public class Interpreter {
     public static void findEndOfFile(Scanner scanner){
         if (!scanner.hasNextLine())
         {
+            System.out.println();
             System.out.println("Обнаружен конец ввода. Выход из программы.");
             System.exit(20);
         }
