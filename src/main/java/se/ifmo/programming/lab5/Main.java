@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args){
         String fileName = System.getenv("FILENAME");
         if (fileName == null) {
-            System.out.println("Переменная оркужения не установлена.\nВыход из программы.");
+            System.out.println("Переменная окружения не установлена.\nВыход из программы.");
             System.exit(16);
         }
         File file = new File(fileName);
