@@ -1,3 +1,4 @@
-clear
+reorder
 show
+reorder
 execute_script src/main/resources/script1

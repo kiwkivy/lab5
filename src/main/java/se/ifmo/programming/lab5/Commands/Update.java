@@ -15,14 +15,14 @@ public class Update<E> extends Command {
     public Update(Storage storage, E element, int id) {
         super(storage);
         this.element = element;
-        this.id = id-1;
+        this.id = id;
     }
 
     @Override
     public void execute() {
         try {
             storage.update(id, element);
-            System.out.println("Элемент с id "+ id +" обновлён");
+            System.out.println("Элемент с id "+ id++ +" обновлён");
         }catch (ElementNotValidException e){
         }
     }

@@ -3,6 +3,7 @@ package se.ifmo.programming.lab5.utils;
 import se.ifmo.programming.lab5.Commands.*;
 import se.ifmo.programming.lab5.data.*;
 import se.ifmo.programming.lab5.storage.DragonVectorStorage;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Interpreter {
-    private final boolean isConsoleMod;
+    private static boolean isConsoleMod;
     private File file;
     private DragonVectorStorage dragonVectorStorage;
     public static List<String> scriptArray = new ArrayList<>();
@@ -48,8 +49,9 @@ public class Interpreter {
             if (isConsoleMod) {
                 System.out.print("Введите команду: ");
             }
-            Interpreter.findEndOfFile(scanner);
-            data = scanner.nextLine();
+            if (!scanner.hasNextLine() || ((data = scanner.nextLine()).equals(" "))){
+                System.exit(20);
+            }
             String[] commandParts = data.split("\\s+");
             String command = commandParts[0];
             if (!data.equals("")) {
