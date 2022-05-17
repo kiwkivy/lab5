@@ -10,7 +10,7 @@ import se.ifmo.programming.lab5.storage.Storage;
 public class InsertAt<E> extends Command {
     private int index;
     public static String description = "добавить новый элемент в заданную позицию";
-    public static String syntax = "insert_at index name age";
+    public static String syntax = "insert_at index {element}";
 
     public InsertAt(Storage storage, E element, int index) {
         super(storage, element);

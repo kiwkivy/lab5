@@ -10,7 +10,7 @@ import se.ifmo.programming.lab5.storage.Storage;
 public class Update<E> extends Command {
     private int id;
     public static String description = "обновить значение элемента коллекции, id которого равен заданному";
-    public static String syntax = "update id name age";
+    public static String syntax = "update id {element}";
 
     public Update(Storage storage, E element, int id) {
         super(storage);

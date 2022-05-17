@@ -8,7 +8,7 @@ import se.ifmo.programming.lab5.storage.Storage;
  */
 public class Add<E> extends Command {
     public static String description = "добавить новый элемент в коллекцию";
-    public static String syntax = "add name age";
+    public static String syntax = "add {element}";
 
     public Add(Storage storage, E element) {
         super(storage,element);
